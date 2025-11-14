@@ -1,0 +1,12 @@
+# Este archivo debe configurarse con la ubicación de tu Android SDK
+# Android Studio lo genera automáticamente cuando abres el proyecto
+# Si tienes problemas, descomenta y ajusta la ruta:
+
+# Windows:
+# sdk.dir=C\:\\Users\\TU_USUARIO\\AppData\\Local\\Android\\Sdk
+
+# Mac:
+# sdk.dir=/Users/TU_USUARIO/Library/Android/sdk
+
+# Linux:
+# sdk.dir=/home/TU_USUARIO/Android/Sdk

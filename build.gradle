@@ -1,0 +1,21 @@
+// Top-level build file
+// Versiones FIJAS y ESTABLES - NO actualizar sin probar
+buildscript {
+    ext {
+        // Versiones probadas y estables
+        agp_version = '8.0.2'        // Android Gradle Plugin
+        kotlin_version = '1.8.20'     // Kotlin estable
+        compile_sdk = 33              // Android 13
+        target_sdk = 33               // Android 13
+        min_sdk = 24                  // Android 7.0 (94% dispositivos)
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.0.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
