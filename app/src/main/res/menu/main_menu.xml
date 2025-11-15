@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Buscar -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_hint"
+        app:showAsAction="ifRoom" />
+
+    <!-- Refrescar -->
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/webview_refresh"
+        app:showAsAction="ifRoom" />
+
+    <!-- Cerrar sesión -->
+    <item
+        android:id="@+id/action_sign_out"
+        android:title="@string/msg_sign_out"
+        app:showAsAction="never" />
+
+</menu>

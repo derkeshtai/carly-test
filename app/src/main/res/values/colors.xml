@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
     <color name="ic_launcher_background">#667EEA</color>
+
+    <!-- Paleta principal - Material Design 3 -->
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_dark">#018786</color>
+    <color name="accent">#FF6B6B</color>
+
+    <!-- Fondos -->
+    <color name="background">#FFFFFF</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="surface_dark">#1E1E1E</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Estados -->
+    <color name="error">#B00020</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+
+    <!-- Favoritos -->
+    <color name="favorite">#FFD700</color>
+    <color name="favorite_border">#FFA000</color>
+
+    <!-- Tabs -->
+    <color name="tab_selected">#6200EE</color>
+    <color name="tab_unselected">#9E9E9E</color>
+
+    <!-- Transparencias -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#40FFFFFF</color>
 </resources>

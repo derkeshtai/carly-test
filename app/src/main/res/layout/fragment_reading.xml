@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <!-- ScrollView para el contenido -->
+    <ScrollView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card del libro actual -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Thumbnail -->
+                    <ImageView
+                        android:id="@+id/ivThumbnail"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:background="@color/surface"
+                        android:src="@drawable/ic_book_placeholder" />
+
+                    <!-- Información del libro -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Título del libro"
+                            android:textSize="18sp"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:maxLines="2"
+                            android:ellipsize="end" />
+
+                        <TextView
+                            android:id="@+id/tvAuthor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Autor"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reading_progress"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary"
+                            android:layout_marginTop="8dp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginTop="8dp"
+                            android:progressTint="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/tvLastRead"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/reading_last_read"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_hint"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botón continuar leyendo -->
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/ButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reading_continue"
+                android:textSize="16sp"
+                android:paddingVertical="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Empty view -->
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reading_empty"
+            android:textSize="20sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reading_empty_subtitle"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

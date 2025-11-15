@@ -84,10 +84,22 @@ dependencies {
     
     // PDF Viewer
     implementation 'com.github.mhiew:android-pdf-viewer:3.2.0-beta.3'
-    
+
     // Splash Screen
     implementation 'androidx.core:core-splashscreen:1.0.1'
-    
+
+    // ViewPager2 para tabs
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // WebView avanzado
+    implementation 'androidx.webkit:webkit:1.7.0'
+
+    // SwipeRefreshLayout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Fragment KTX
+    implementation 'androidx.fragment:fragment-ktx:1.6.1'
+
     // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

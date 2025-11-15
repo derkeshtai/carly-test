@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">CarlyDean Library</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_welcome">Bienvenido a CarlyDean Library</string>
+    <string name="splash_subtitle">Tu biblioteca personal</string>
+    <string name="splash_continue_guest">Continuar sin cuenta</string>
+    <string name="splash_sign_in">Iniciar sesión con Google</string>
+    <string name="splash_loading">Cargando…</string>
+
+    <!-- Tabs -->
+    <string name="tab_library">Biblioteca</string>
+    <string name="tab_favorites">Favoritos</string>
+    <string name="tab_reading">Leyendo</string>
+
+    <!-- Library -->
+    <string name="library_loading">Cargando biblioteca…</string>
+    <string name="library_error">Error al cargar. Toca para reintentar.</string>
+    <string name="library_empty">No hay libros disponibles</string>
+    <string name="library_sign_in_required">Inicia sesión para ver más libros</string>
+
+    <!-- Favorites -->
+    <string name="favorites_empty">No tienes favoritos aún</string>
+    <string name="favorites_empty_subtitle">Toca la estrella en cualquier libro para agregarlo</string>
+    <string name="favorites_added">Agregado a favoritos</string>
+    <string name="favorites_removed">Removido de favoritos</string>
+
+    <!-- Reading Now -->
+    <string name="reading_empty">No estás leyendo nada</string>
+    <string name="reading_empty_subtitle">Abre un libro para comenzar</string>
+    <string name="reading_continue">Continuar leyendo</string>
+    <string name="reading_progress">Progreso: %1$d%%</string>
+    <string name="reading_page">Página %1$d de %2$d</string>
+    <string name="reading_last_read">Última lectura: %1$s</string>
+
+    <!-- Book Actions -->
+    <string name="book_open">Abrir</string>
+    <string name="book_download">Descargar</string>
+    <string name="book_downloading">Descargando…</string>
+    <string name="book_downloaded">Descargado</string>
+    <string name="book_share">Compartir</string>
+    <string name="book_delete">Eliminar</string>
+
+    <!-- WebView -->
+    <string name="webview_loading">Cargando Google Drive…</string>
+    <string name="webview_error">Error de conexión</string>
+    <string name="webview_refresh">Actualizar</string>
+    <string name="webview_sign_in">Inicia sesión en Google</string>
+
+    <!-- Search -->
+    <string name="search_hint">Buscar libros, autores…</string>
+    <string name="search_no_results">No se encontraron resultados</string>
+    <string name="search_filter_category">Filtrar por categoría</string>
+    <string name="search_filter_author">Filtrar por autor</string>
+
+    <!-- Messages -->
+    <string name="msg_no_internet">Sin conexión a Internet</string>
+    <string name="msg_error_generic">Algo salió mal. Intenta de nuevo.</string>
+    <string name="msg_sign_in_success">¡Sesión iniciada!</string>
+    <string name="msg_sign_out">Cerrar sesión</string>
+
+    <!-- Buttons -->
+    <string name="btn_retry">Reintentar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_close">Cerrar</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Configuración</string>
+    <string name="settings_account">Cuenta</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_about">Acerca de</string>
+</resources>
