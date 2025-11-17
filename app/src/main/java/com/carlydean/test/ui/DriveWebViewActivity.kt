@@ -245,8 +245,17 @@ class DriveWebViewActivity : AppCompatActivity() {
         if (webView.canGoBack()) {
             webView.goBack()
         } else {
+            // Si estamos en modo auth y el usuario cancela, enviar RESULT_CANCELED
+            if (mode == "auth") {
+                setResult(RESULT_CANCELED)
+            }
             super.onBackPressed()
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     override fun onDestroy() {

@@ -33,6 +33,7 @@
         <item name="tabTextColor">@color/tab_unselected</item>
         <item name="tabIndicatorHeight">3dp</item>
         <item name="tabIndicatorFullWidth">false</item>
+        <item name="android:background">@color/surface</item>
     </style>
 
     <!-- Estilo para botones principales -->
@@ -53,7 +54,7 @@
     <style name="CardStyle" parent="Widget.Material3.CardView.Elevated">
         <item name="cardElevation">4dp</item>
         <item name="cardCornerRadius">12dp</item>
-        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/surface</item>
     </style>
 
 </resources>

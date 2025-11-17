@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
 
         // Configurar tabs
         setupTabs()
+
+        // Configurar SearchView
+        setupSearchView()
     }
 
     private fun setupViewPager() {
@@ -100,9 +103,53 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupSearchView() {
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                performSearch(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // Búsqueda en tiempo real (opcional)
+                if (!newText.isNullOrEmpty() && newText.length > 2) {
+                    performSearch(newText)
+                }
+                return true
+            }
+        })
+
+        searchView.setOnCloseListener {
+            searchView.visibility = android.view.View.GONE
+            false
+        }
+    }
+
+    private fun performSearch(query: String?) {
+        if (query.isNullOrEmpty()) return
+
+        val currentFragment = supportFragmentManager.findFragmentByTag("f${viewPager.currentItem}")
+
+        when (viewPager.currentItem) {
+            0 -> {
+                // Tab Biblioteca - Buscar en Drive usando JavaScript
+                val libraryFragment = currentFragment as? com.carlydean.test.ui.fragments.LibraryFragment
+                libraryFragment?.searchInDrive(query)
+            }
+            1 -> {
+                // Tab Favoritos - Buscar localmente
+                // TODO: Implementar búsqueda en favoritos
+            }
+            2 -> {
+                // Tab Leyendo Ahora - No necesita búsqueda
+            }
+        }
+    }
+
     private fun toggleSearch() {
         if (searchView.visibility == android.view.View.VISIBLE) {
             searchView.visibility = android.view.View.GONE
+            searchView.setQuery("", false)
         } else {
             searchView.visibility = android.view.View.VISIBLE
             searchView.requestFocus()
@@ -110,9 +157,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun refreshCurrentTab() {
-        // Refrescar el tab actual
-        val currentItem = viewPager.currentItem
-        // TODO: Implementar refresh según el fragmento actual
+        val currentFragment = supportFragmentManager.findFragmentByTag("f${viewPager.currentItem}")
+
+        when (viewPager.currentItem) {
+            0 -> {
+                val libraryFragment = currentFragment as? com.carlydean.test.ui.fragments.LibraryFragment
+                libraryFragment?.reload()
+            }
+            1 -> {
+                // Recargar favoritos
+            }
+            2 -> {
+                // Recargar leyendo ahora
+            }
+        }
     }
 
     private fun signOut() {

@@ -135,14 +135,97 @@ class LibraryFragment : Fragment() {
         val js = """
             javascript:(function() {
                 try {
-                    // Personalización opcional de la UI de Drive
                     console.log('CarlyDean Library - Drive loaded');
 
-                    // Puedes agregar más personalizaciones aquí
-                    // Por ejemplo, ocultar ciertos elementos, cambiar estilos, etc.
+                    // Crear estilos personalizados
+                    var style = document.createElement('style');
+                    style.innerHTML = `
+                        /* Ocultar botón de denunciar */
+                        [aria-label*="Denunciar"],
+                        [aria-label*="Report"],
+                        [data-tooltip*="Report"],
+                        [data-tooltip*="Denunciar"],
+                        button[aria-label*="Report abuse"] {
+                            display: none !important;
+                        }
+
+                        /* Ocultar información del propietario */
+                        [data-tooltip*="Propietario"],
+                        [data-tooltip*="Owner"],
+                        .a-s-fa-Ha-pa,
+                        .K2Fgzb {
+                            display: none !important;
+                        }
+
+                        /* Tema oscuro con bermellón */
+                        body, .a-Hd-c, .h-j-f-d {
+                            background-color: #121212 !important;
+                            color: #FFFFFF !important;
+                        }
+
+                        /* Toolbar oscuro */
+                        header, .gb_Jc, .a-s-fa-ha-zi {
+                            background-color: #1E1E1E !important;
+                        }
+
+                        /* Elementos seleccionados en bermellón */
+                        .a-s-fa-Ha-Sc-uc,
+                        .a-s-fa-Ha-pa-uc,
+                        [aria-selected="true"] {
+                            background-color: #E34234 !important;
+                        }
+
+                        /* Links y botones en bermellón */
+                        a, .a-s-fa-ha-t-uh {
+                            color: #FF6B5F !important;
+                        }
+
+                        /* Cards y superficies */
+                        .a-s-fa-Ha-pa, .h-j-Na-oa {
+                            background-color: #1E1E1E !important;
+                            border-color: #333333 !important;
+                        }
+
+                        /* Texto secundario */
+                        .a-s-fa-Ha-Fb, .h-j-Na-kb-f {
+                            color: #B3B3B3 !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
 
                 } catch (e) {
                     console.error('Error in custom JS:', e);
+                }
+            })();
+        """.trimIndent()
+
+        webView.evaluateJavascript(js, null)
+    }
+
+    /**
+     * Busca en Drive usando la funcionalidad nativa
+     */
+    fun searchInDrive(query: String) {
+        val js = """
+            javascript:(function() {
+                try {
+                    // Hacer click en el botón de búsqueda de Drive
+                    var searchButton = document.querySelector('[aria-label*="Search"], [aria-label*="Buscar"]');
+                    if (searchButton) {
+                        searchButton.click();
+
+                        // Esperar un momento y rellenar el campo de búsqueda
+                        setTimeout(function() {
+                            var searchInput = document.querySelector('input[type="search"], input[aria-label*="Search"], input[aria-label*="Buscar"]');
+                            if (searchInput) {
+                                searchInput.value = '$query';
+                                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                                searchInput.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+                            }
+                        }, 300);
+                    }
+                } catch (e) {
+                    console.error('Error searching:', e);
                 }
             })();
         """.trimIndent()

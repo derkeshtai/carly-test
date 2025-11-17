@@ -3,39 +3,39 @@
     <!-- Colores base -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="ic_launcher_background">#667EEA</color>
+    <color name="ic_launcher_background">#E34234</color>
 
-    <!-- Paleta principal - Material Design 3 -->
-    <color name="primary">#6200EE</color>
-    <color name="primary_dark">#3700B3</color>
-    <color name="primary_light">#BB86FC</color>
-    <color name="secondary">#03DAC6</color>
-    <color name="secondary_dark">#018786</color>
-    <color name="accent">#FF6B6B</color>
+    <!-- Paleta principal - Oscuro con Bermellón -->
+    <color name="primary">#E34234</color>           <!-- Bermellón -->
+    <color name="primary_dark">#B8312A</color>      <!-- Bermellón oscuro -->
+    <color name="primary_light">#FF6B5F</color>     <!-- Bermellón claro -->
+    <color name="secondary">#FF8A65</color>         <!-- Naranja coral -->
+    <color name="secondary_dark">#D84315</color>    <!-- Naranja oscuro -->
+    <color name="accent">#E34234</color>            <!-- Bermellón (acento) -->
 
-    <!-- Fondos -->
-    <color name="background">#FFFFFF</color>
-    <color name="background_dark">#121212</color>
-    <color name="surface">#F5F5F5</color>
-    <color name="surface_dark">#1E1E1E</color>
+    <!-- Fondos - Tema oscuro -->
+    <color name="background">#121212</color>        <!-- Negro carbón -->
+    <color name="background_dark">#000000</color>   <!-- Negro puro -->
+    <color name="surface">#1E1E1E</color>           <!-- Gris muy oscuro -->
+    <color name="surface_dark">#0D0D0D</color>      <!-- Casi negro -->
 
-    <!-- Texto -->
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
-    <color name="text_hint">#BDBDBD</color>
+    <!-- Texto para tema oscuro -->
+    <color name="text_primary">#FFFFFF</color>      <!-- Blanco -->
+    <color name="text_secondary">#B3B3B3</color>    <!-- Gris claro -->
+    <color name="text_hint">#6B6B6B</color>         <!-- Gris medio -->
 
     <!-- Estados -->
-    <color name="error">#B00020</color>
-    <color name="success">#4CAF50</color>
-    <color name="warning">#FF9800</color>
+    <color name="error">#CF6679</color>             <!-- Rojo suave -->
+    <color name="success">#66BB6A</color>           <!-- Verde suave -->
+    <color name="warning">#FFA726</color>           <!-- Naranja suave -->
 
     <!-- Favoritos -->
-    <color name="favorite">#FFD700</color>
-    <color name="favorite_border">#FFA000</color>
+    <color name="favorite">#FFD54F</color>          <!-- Amarillo dorado -->
+    <color name="favorite_border">#FFC107</color>   <!-- Ámbar -->
 
     <!-- Tabs -->
-    <color name="tab_selected">#6200EE</color>
-    <color name="tab_unselected">#9E9E9E</color>
+    <color name="tab_selected">#E34234</color>      <!-- Bermellón -->
+    <color name="tab_unselected">#6B6B6B</color>    <!-- Gris oscuro */
 
     <!-- Transparencias -->
     <color name="overlay_dark">#80000000</color>
